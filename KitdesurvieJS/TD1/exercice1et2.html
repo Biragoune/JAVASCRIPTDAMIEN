@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 1</title>
+
+  <script type="text/javascript">
+    var etudiant = {
+      nom: "Lecronte",
+      prenom: "Damien",
+      numero_etudiant: 213213334,
+      date_naissance: [18, 11, 1997],
+    }
+
+    function Etudiant(nom, prenom, numero_etudiant, date_naissance){
+      this.nom    = nom;
+      this.prenom = prenom;
+      this.numero_etudiant    = numero_etudiant;
+      this.date_naissance = date_naissance;
+      this.age = function(){  var ddj = new Date();
+                              var age = ddj.getFullYear() - date_naissance[2];
+                              return age;
+                           };
+      this.presenter = function(){
+        console.log("Je suis " + this.nom + " " + this.prenom + ", mon numéro d'étudiant est le " + this.numero_etudiant + ", je suis né le " + this.date_naissance + " et j'ai donc " +this.age() + " ans.");
+      };
+    }
+
+    var etu = new Etudiant("Lecronte", "Damien", 213213334, [18, 11, 1997]);
+    etu.presenter();
+    var etu2 = new Etudiant("Roux", "Nicolas", 23578955, [19, 5, 1998]);
+    etu2.presenter();
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>

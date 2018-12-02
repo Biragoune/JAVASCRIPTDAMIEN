@@ -1,0 +1,39 @@
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>exercice 1</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" type="text/css" href="styleee.css">
+  <style>
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+        $( "#sortable" ).sortable({
+      revert: true
+    });
+    $( "#draggable" ).draggable({ containment: "parent" });
+  } );
+  </script>
+</head>
+<body>
+
+  <div class="draggable ui-widget-content carrebord">
+    <div id="draggable" class="ui-widget-content lerouge">
+      <p>Bouge moi</p>
+    </div>
+    <ul id="sortable">
+      <li class="ui-state-default taille">Item 1</li>
+      <li class="ui-state-default taille">Item 2</li>
+      <li class="ui-state-default taille">Item 3</li>
+      <li class="ui-state-default taille">Item 4</li>
+      <li class="ui-state-default taille">Item 5</li>
+    </ul>
+  </div>
+
+</body>
+</html>
